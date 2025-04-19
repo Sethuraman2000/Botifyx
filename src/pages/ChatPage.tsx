@@ -274,7 +274,7 @@ const ChatPage: React.FC = () => {
       const aiMessage: ChatMessage = {
         id: (Date.now() + 1).toString(),
         role: "assistant",
-        content: data.message || "Sorry, I couldn't process your request.", // Get the response from the API or show a fallback
+        content: data[0]?.message || "Sorry, I couldn't process your request.", // Get the response from the API or show a fallback
         timestamp: new Date(),
       };
 
